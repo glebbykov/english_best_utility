@@ -72,26 +72,29 @@ if __name__ == "__main__":
 
     while True:
         for idx, verb_form_pair in enumerate(verb_form_pairs):
+            verb, form = verb_form_pair  # Добавляем эту строку для распаковки tuple
+    
             if (tuple(verb), form) in answered_correctly:
                 continue
-
+            
             delta = quiz_user(verb_form_pair, errors)
             correct_percent += delta
             correct_percent = max(0, correct_percent)
             display_progress_bar(correct_percent)
-
+    
             if delta == 1:
                 answered_correctly.add((tuple(verb), form))
-
+    
             if correct_percent >= 100:
                 break
-
+            
         if len(answered_correctly) == len(verb_form_pairs):
             answered_correctly.clear()
             random.shuffle(verb_form_pairs)
-
+    
         if correct_percent >= 100:
             break
+
 
     time_elapsed = time.time() - start_time
     minutes, seconds = divmod(time_elapsed, 60)
