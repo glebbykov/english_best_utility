@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
     while True:
         for idx, verb_form_pair in enumerate(verb_form_pairs):
-            if verb_form_pair in answered_correctly:
+            if (tuple(verb), form) in answered_correctly:
                 continue
 
             delta = quiz_user(verb_form_pair, errors)
@@ -81,7 +81,7 @@ if __name__ == "__main__":
             display_progress_bar(correct_percent)
 
             if delta == 1:
-                answered_correctly.add(verb_form_pair)
+                answered_correctly.add((tuple(verb), form))
 
             if correct_percent >= 100:
                 break
