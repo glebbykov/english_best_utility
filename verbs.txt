@@ -69,11 +69,11 @@ throw threw thrown кидать/бросать
 fly flew flown летать
 forbid forbade forbidden запрещать/не_позволять
 grow grew grown расти/выращивать
-throw threw thrown кидать, бросать
+throw threw thrown кидать/бросать
 hear heard heard слышать
 hide hid hidden прятать/скрывать
 hit hit hit ударять/поражать
-hold held held держать/сохранять/занимать пост
+hold held held держать/сохранять/занимать(пост)
 feed fed fed кормить
 get got got получать, становиться 
 find found found находить 
@@ -81,8 +81,8 @@ have had had иметь/обладать
 hear heard heard слышать
 keep kept kept держать/хранить
 lead led led вести/сопровождать
-leave left left оставлять, уезжать 
-feel felt felt чувствовать себя
+leave left left оставлять/уезжать 
+feel felt felt чувствовать(себя)
 lose lost lost терять
 make made made делать/заставлять
 mean meant meant значить/подразумевать 
