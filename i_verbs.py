@@ -1,5 +1,4 @@
 if __name__ == "__main__":
-    # Ask the user for the filename
     filename = input("Please enter the filename for the verbs list (default is 'verbs.txt'): ").strip()
     if not filename:
         filename = "verbs.txt"
