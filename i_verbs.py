@@ -1,3 +1,52 @@
+import random
+import time
+
+def load_verbs(filename):
+    with open(filename, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    verbs = []
+    for i, line in enumerate(lines):
+        items = line.strip().split()
+        if len(items) != 4:
+            print(f"Warning: Skipping malformed line {i+1}: {line.strip()}")
+            continue
+        verbs.append(items)
+    return verbs
+
+def display_progress_bar(percent):
+    filled_length = int(50 * percent // 100)
+    bar = "█" * filled_length + '-' * (50 - filled_length)
+    print(f'\rProgress: |{bar}| {percent}% Correct', end='\r')
+
+def update_record_file(time_elapsed):
+    with open('records.txt', 'a', encoding='utf-8') as f:
+        f.write(f"Time to 100%: {time_elapsed} seconds\n")
+
+def quiz_user(verb_form_pair, errors):
+    verb, form = verb_form_pair
+    base, past, past_participle, russian_verb = verb
+    
+    english_form = ""
+    if form == "base":
+        english_form = base
+    elif form == "past":
+        english_form = past
+    else:
+        english_form = past_participle
+
+    print(f"\n{form}\n{russian_verb}")
+    user_input = input().strip()
+    
+    key = (russian_verb, form)
+    
+    if user_input == english_form:
+        print("Correct!")
+        return 1
+    else:
+        print(f"Incorrect!\n{english_form}")
+        errors[key] = errors.get(key, 0) + 1
+        return -2
+
 if __name__ == "__main__":
     filename = input("Please enter the filename for the verbs list (default is 'verbs.txt'): ").strip()
     if not filename:
