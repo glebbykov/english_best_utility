@@ -25,7 +25,7 @@ def update_record_file(time_elapsed):
 def quiz_user(verb_form_pair, errors):
     verb, form = verb_form_pair
     base, past, past_participle, russian_verb = verb
-    
+
     english_form = ""
     if form == "base":
         english_form = base
@@ -36,9 +36,9 @@ def quiz_user(verb_form_pair, errors):
 
     print(f"\n{form}\n{russian_verb}")
     user_input = input().strip()
-    
+
     key = (russian_verb, form)
-    
+
     if user_input == english_form:
         print("Correct!")
         return 1
@@ -59,33 +59,47 @@ if __name__ == "__main__":
         exit(1)
 
     forms = ["base", "past", "past participle"]
-    
     verb_form_pairs = [(verb, form) for verb in verbs for form in forms]
     random.shuffle(verb_form_pairs)
-    
+
     correct_percent = 0
     start_time = time.time()
-    
     errors = {}
-    total_questions = len(verb_form_pairs)
 
     print(f"Starting the quiz. Reach 100% to complete.")
-    
-    for idx, verb_form_pair in enumerate(verb_form_pairs):
-        delta = quiz_user(verb_form_pair, errors)
-        correct_percent += delta
-        correct_percent = max(0, correct_percent)
-        display_progress_bar(correct_percent)
-        
+
+    answered_correctly = set()
+
+    while True:
+        for idx, verb_form_pair in enumerate(verb_form_pairs):
+            if verb_form_pair in answered_correctly:
+                continue
+
+            delta = quiz_user(verb_form_pair, errors)
+            correct_percent += delta
+            correct_percent = max(0, correct_percent)
+            display_progress_bar(correct_percent)
+
+            if delta == 1:
+                answered_correctly.add(verb_form_pair)
+
+            if correct_percent >= 100:
+                break
+
+        if len(answered_correctly) == len(verb_form_pairs):
+            answered_correctly.clear()
+            random.shuffle(verb_form_pairs)
+
         if correct_percent >= 100:
             break
-    
+
     time_elapsed = time.time() - start_time
     minutes, seconds = divmod(time_elapsed, 60)
-    
+
     print(f"\nTotal time to reach 100%: {int(minutes)} minutes {int(seconds)} seconds")
     update_record_file(time_elapsed)
-    
-    print("\nErrors by verb and form:")
-    for key, value in errors.items():
-        print(f"{key}: {value} errors")
+
+    if errors:
+        print("\nErrors by verb and form:")
+        for key, value in errors.items():
+            print(f"{key}: {value} errors")
