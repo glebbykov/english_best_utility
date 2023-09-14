@@ -4,7 +4,13 @@ import time
 def load_verbs(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         lines = f.readlines()
-    verbs = [line.strip().split() for line in lines]
+    verbs = []
+    for i, line in enumerate(lines):
+        items = line.strip().split()
+        if len(items) != 4:
+            print(f"Warning: Skipping malformed line {i+1}: {line.strip()}")
+            continue
+        verbs.append(items)
     return verbs
 
 def display_progress_bar(percent):
