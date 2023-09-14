@@ -75,7 +75,7 @@ hide hid hidden прятать/скрывать
 hit hit hit ударять/поражать
 hold held held держать/сохранять/занимать(пост)
 feed fed fed кормить
-get got got получать, становиться 
+get got got получать/становиться 
 find found found находить 
 have had had иметь/обладать
 hear heard heard слышать
