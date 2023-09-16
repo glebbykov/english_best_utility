@@ -32,7 +32,6 @@ spring sprang sprung прыгать/вздрагивать
 break broke broken ломать/прерывать/разбивать
 choose chose chosen выбирать
 drive drove driven ехать/водить
-choose chose chosen выбирать
 give gave given давать
 forget forgot forgotten забывать
 forgive forgave forgiven прощать
@@ -49,7 +48,7 @@ speak spoke spoken говорить
 spell spelt spelt писать/произносить(слово_по_буквам)(BrE)
 spell spelled spelled писать/произносить(слово_по_буквам)(AmE)
 shut  shut  shut закрывать(ся)/прекращать
-shoot shot shot стрелять/бросать
+shoot shot shot стрелять/бросать/снимать
 write wrote written писать
 eat ate eaten есть(еду)
 cost cost cost стоить
@@ -115,3 +114,5 @@ show showed showed показывать
 spoil spoilt spoilt портить/баловать(BrE)
 spoil spoiled spoiled портить/баловать(AmE)
 wake woke woken просыпаться
+bite bit bitten кусать/говорить(колкости)
+slide slid slid скользить
