@@ -37,7 +37,6 @@ forget forgot forgotten забывать
 forgive forgave forgiven прощать
 freeze froze frozen замораживать/замерзать
 take took taken брать
-give gave given давать
 fall fell fallen падать
 see saw seen видеть
 sew sewed sewn шить/пришиват
@@ -69,7 +68,6 @@ fly flew flown летать
 forbid forbade forbidden запрещать/не_позволять
 bid bid bid просить/приказывать/предлагать
 grow grew grown расти/выращивать
-hear heard heard слышать
 hide hid hidden прятать/скрывать
 hit hit hit ударять/поражать
 hold held held держать/сохранять/занимать(пост)
@@ -96,6 +94,8 @@ stand stood stood стоять
 steal stole stolen красть/воровать
 smell smelt smelt пахнуть/чувствовать(запах)(BrE)
 smell smelled smelled пахнуть/чувствовать(запах)(AmE)
+learn learnt learnt изучить(BrE)
+learn learned learned изучить(AmE)
 tell told told рассказывать/сообщать
 understand understood understood понимать 
 win won won выигрывать/получать 
