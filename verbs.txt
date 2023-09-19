@@ -67,6 +67,7 @@ know knew known знать
 throw threw thrown кидать/бросать
 fly flew flown летать
 forbid forbade forbidden запрещать/не_позволять
+bid bid bid просить/приказывать/предлагать
 grow grew grown расти/выращивать
 hear heard heard слышать
 hide hid hidden прятать/скрывать
