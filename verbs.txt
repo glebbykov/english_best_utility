@@ -68,7 +68,6 @@ throw threw thrown кидать/бросать
 fly flew flown летать
 forbid forbade forbidden запрещать/не_позволять
 grow grew grown расти/выращивать
-throw threw thrown кидать/бросать
 hear heard heard слышать
 hide hid hidden прятать/скрывать
 hit hit hit ударять/поражать
@@ -102,7 +101,7 @@ win won won выигрывать/получать
 build built built строить
 rebuild rebuilt rebuilt перестраивать/восстанавливать
 send sent sent посылать/отправлять
-bear bore born носить/рождать
+bear bore born носить/выносить/терпеть/рождать
 wear wore worn носить(одежду)
 hang hung hung висеть/вешать(объекты)
 hang hanged hanged висеть/вешать(казнь)
